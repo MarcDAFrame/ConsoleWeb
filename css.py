@@ -4,7 +4,9 @@ import cssutils
 def css_dict(css_raw): 
     #.decode('utf-8')
     # print(cssutils.parseString(css_raw))
-
+    """
+    
+    """
     dct = {}
     for rule in cssutils.parseString(css_raw):
         selector = rule.selectorText
@@ -12,6 +14,16 @@ def css_dict(css_raw):
         dct[selector] = styles
 
     return dct
+
+def create_css(styles):
+    css = {}
+
+    for key, value in styles.items():
+        css[key] = {}
+        for items in value.split(';'):
+            css[key][items.split(':')[0].strip('\n').strip()] = items.split(':')[1].strip('\n').strip()
+
+    return css
 
 def get_css(url):
     return urllib.request.urlopen(url).read()
