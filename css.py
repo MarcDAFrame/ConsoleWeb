@@ -9,7 +9,7 @@ def css_dict(css_raw):
     """
     dct = {}
     for rule in cssutils.parseString(css_raw):
-        selector = rule.selectorText
+        selector = rule.selectorText.strip('.').strip('#')
         styles = rule.style.cssText
         dct[selector] = styles
 

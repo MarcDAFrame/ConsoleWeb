@@ -1,3 +1,16 @@
-1. setup rules 
 
-2. hex / rgb to ANSI color codes - THIS COULD BE ITS OWN GIT REPO
+Marc
+- height of empty items relative to its children
+- styles from within tag 
+- class / id applied to tag
+- line breaks 
+- body 100% height when html is 100%
+
+DONE
+- body %100 width
+
+
+
+
+Olivia
+2. hex / rgb to ANSI color codes - THIS COULD BE ITS OWN GIT REPO (olivia)

@@ -17,7 +17,7 @@ def parse_page(page, url):
     styles.update(css_dict(soup.style.text))
 
     for i in soup.find_all('link', rel="stylesheet"):
-        print(i['href'])
+        # print(i['href'])
         if i['href'][0:3] != 'http':
             css_raw = get_css(url+i['href'])
         else:
@@ -31,7 +31,7 @@ def parse_page(page, url):
 
 def get_html(url):
     '''
-    returns page
+    returns page html
     '''
     page = urllib.request.urlopen(url).read()
     # print(bs4.BeautifulSoup(page, "lxml"))
